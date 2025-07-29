@@ -1,3 +1,5 @@
+"use client";
+
 import "@/styles/repo.css";
 
 import RepoContent from "@/components/RepoContent";
