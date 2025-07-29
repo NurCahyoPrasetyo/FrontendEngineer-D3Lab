@@ -5,13 +5,12 @@ import "@/styles/repolist.css";
 import { GitHubRepo } from "@/types/github";
 import { useRouter } from "next/navigation";
 
-export default function RepoList({
-  username,
-  repos,
-}: {
+type RepoListProps = {
   username: string;
   repos: GitHubRepo[];
-}) {
+};
+
+export default function RepoList({ username, repos }: RepoListProps) {
   const router = useRouter();
 
   return (

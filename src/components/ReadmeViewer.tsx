@@ -6,7 +6,11 @@ import DOMPurify from "isomorphic-dompurify";
 import { marked } from "marked";
 import { useEffect, useState } from "react";
 
-export default function ReadmeViewer({ markdown }: { markdown: string }) {
+type ReadmeViewerProps = {
+  markdown: string;
+};
+
+export default function ReadmeViewer({ markdown }: ReadmeViewerProps) {
   const [html, setHtml] = useState("");
 
   useEffect(() => {

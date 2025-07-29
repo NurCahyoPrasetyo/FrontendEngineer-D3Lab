@@ -4,7 +4,11 @@ import { useReadme } from "@/context/ReadmeContext";
 import ReadmeViewer from "./ReadmeViewer";
 import Loading from "./ui/Loading";
 
-export default function RepoContent({ repoName }: { repoName: string }) {
+type RepoContentProps = {
+  repoName: string;
+};
+
+export default function RepoContent({ repoName }: RepoContentProps) {
   const { readme, loading } = useReadme();
 
   if (loading) return <Loading />;
