@@ -4,14 +4,14 @@ import "@/styles/username.css";
 
 import ProfileContent from "@/components/ProfileContent";
 import { GitHubProvider } from "@/context/GitHubContext";
+import { useParams } from "next/navigation";
 
-type UserPageProps = {
-  params: { username: string };
-};
+export default function UserPage() {
+  const params = useParams();
+  const username = params?.username as string;
 
-export default function UserPage({ params }: UserPageProps) {
   return (
-    <GitHubProvider username={params.username}>
+    <GitHubProvider username={username}>
       <ProfileContent />
     </GitHubProvider>
   );
