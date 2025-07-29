@@ -1,0 +1,21 @@
+.repo-list {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.repo-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.repo-item>h2 {
+    word-break: break-word;
+}
+
+.repo-item:hover {
+    background: #e6f7ff;
+}
