@@ -1,6 +1,7 @@
 "use client";
 
 import "@/styles/repolist.css";
+
 import { GitHubRepo } from "@/types/github";
 import { useRouter } from "next/navigation";
 

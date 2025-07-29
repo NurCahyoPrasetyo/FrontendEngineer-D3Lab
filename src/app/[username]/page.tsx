@@ -1,10 +1,15 @@
 "use client";
 
-import ProfileContent from "@/components/ProfileContent";
-import { GitHubProvider } from "@/context/GitHubContext";
 import "@/styles/username.css";
 
-export default function UserPage({ params }: { params: { username: string } }) {
+import ProfileContent from "@/components/ProfileContent";
+import { GitHubProvider } from "@/context/GitHubContext";
+
+type UserPageProps = {
+  params: { username: string };
+};
+
+export default function UserPage({ params }: UserPageProps) {
   return (
     <GitHubProvider username={params.username}>
       <ProfileContent />
